@@ -1,26 +1,26 @@
 ﻿/*
-	Bài 04: Viết 01 chương trình thực hiện toàn bộ các công việc sau:
-
-			a. Cho phép người dùng nhập vào một mảng số nguyên
-			   gồm r hàng và c cột (tối đa 5 hàng và 6 cột,
-			   nếu nhập sai thì yêu cầu nhập lại cho đến khi đúng mới tiếp tục).
-
-			b. Cho người dùng nhập vào một vị trí cột / hàng cần tính tổng.
-			   Hãy tiến hành tính tổng các giá trị lưu trữ
-			   trong cột / hàng mà người dùng yêu cầu.
-
-			c. Cho người dùng nhập vào một giá trị x bất kỳ.
-			   Hãy tìm xem x có tồn tại trong mảng hay không?
-			   Nếu có thì tồn tại bao nhiêu lần? Tại các vị trí nào?
+	Bài 03. Viết 01 chương trình thực hiện toàn bộ các công việc sau:
+	
+			a. Cho phép người dùng nhập vào một mảng số nguyên gồm r hàng và c cột
+			   (tối đa 10 hàng và 15 cột, nếu nhập sai thì yêu cầu nhập lại
+			   cho đến khi đúng mới tiếp tục).
+			   
+			b. Thực hiện việc tính tổng các giá trị lưu trữ trong mảng.
+			
+			c. Tìm giá trị nhỏ nhất, lớn nhất đang lưu trữ trong mảng.
+			
+			d. Cho biết vị trí của giá trị nhỏ nhất hay lớn nhất ở hàng mấy?
+			   Cột bao nhiêu?
+			   (Giả sử người dùng nhập không có giá trị nào trùng nhau).
 */
 
 #include <iostream>
 #include <conio.h>
 using namespace std;
 
-const int MAX_DONG = 5, MAX_COT = 6;
+const int MAX_DONG = 10, MAX_COT = 15;
 
-void nhapMang(int a[MAX_DONG][MAX_COT], int &dong, int &cot);
+void nhapMang(int a[MAX_DONG][MAX_COT], int dong, int cot);
 void xuatMang(int a[MAX_DONG][MAX_COT], int dong, int cot);
 int tinhTong(int a[MAX_DONG][MAX_COT], int dong, int cot);
 void timGiaTriNhoNhat(int a[MAX_DONG][MAX_COT], int dong, int cot, int &viTriDong, int &viTriCot);
@@ -44,13 +44,31 @@ int main()
 			<< "5. Tim gia tri lon nhat va in ra vi tri (sau khi da nhap mang)\n"
 			<< "6. Thoat chuong trinh\n"
 			<< endl
-			<< "Lua chon cua ban (1..4): ";
+			<< "Lua chon cua ban (1..6): ";
 		cin >> luaChon;
 		cout << endl;
 
 		switch (luaChon)
 		{
 		case 1: // Nhập mảng
+			// Kiểm tra số dòng nhập vào có hợp lệ?
+			do {
+				cout << "Nhap so dong cua ma tran (1..10): ";
+				cin >> dong;
+
+				if (dong <= 0 || dong > MAX_DONG)
+					cout << "So dong khong hop le, vui long nhap lai (1..10)" << endl;
+			} while (dong <= 0 || dong > MAX_DONG);
+
+			// Kiểm tra số cột nhập vào có hợp lệ?
+			do {
+				cout << "Nhap so cot cua ma tran (1..15): ";
+				cin >> cot;
+
+				if (cot <= 0 || cot > MAX_COT)
+					cout << "So cot khong hop le, vui long nhap lai (1..15)" << endl;
+			} while (cot <= 0 || cot > MAX_COT);
+
 			nhapMang(a, dong, cot);
 			daNhapMang = true;
 			cout << endl;
@@ -94,8 +112,8 @@ int main()
 
 				int viTriDong, viTriCot;
 				timGiaTriNhoNhat(a, dong, cot, viTriDong, viTriCot);
-				cout << "Gia tri nho nhat nam tai dong [" << viTriDong
-					<< "] va cot [" << viTriCot << "]\n";
+				cout << "Gia tri nho nhat nam tai dong [" << viTriDong + 1
+					<< "] va cot [" << viTriCot + 1 << "]\n";
 				cout << endl;
 			}
 			else
@@ -113,8 +131,8 @@ int main()
 
 				int viTriDong, viTriCot;
 				timGiaTriLonNhat(a, dong, cot, viTriDong, viTriCot);
-				cout << "Gia tri lon nhat nam tai dong [" << viTriDong
-					<< "] va cot [" << viTriCot << "]\n";
+				cout << "Gia tri lon nhat nam tai dong [" << viTriDong + 1
+					<< "] va cot [" << viTriCot + 1 << "]\n";
 				cout << endl;
 			}
 			else
@@ -124,38 +142,25 @@ int main()
 			}
 			break;
 
-		default: // Thoát chương trình
+		case 6: // Thoát chương trình
 			cout << "Chao tam biet" << endl;
+			return 0;
+
+		default:
+			if (luaChon >= 1 || luaChon <= 6)
+				cout << "Vui long nhap lua chon (1..6)!\n" << endl;
 		} // switch-case
 
 		_getch();
 
-	} while (luaChon >= 1 && luaChon <= 5);
+	} while (luaChon >= 1 || luaChon <= 6);
 
 	return 0;
 } // main()
 
 // 01. Hàm nhập mảng
-void nhapMang(int a[MAX_DONG][MAX_COT], int &dong, int &cot)
+void nhapMang(int a[MAX_DONG][MAX_COT], int dong, int cot)
 {
-	// Kiểm tra số dòng nhập vào có hợp lệ?
-	do {
-		cout << "Nhap so dong cua ma tran: ";
-		cin >> dong;
-
-		if (dong <= 0 || dong >= MAX_DONG)
-			cout << "So dong khong hop le, vui long nhap lai" << endl;
-	} while (dong <= 0 || dong >= MAX_DONG);
-
-	// Kiểm tra số cột nhập vào có hợp lệ?
-	do {
-		cout << "Nhap so cot cua ma tran: ";
-		cin >> cot;
-
-		if (cot <= 0 || cot >= MAX_COT)
-			cout << "So cot khong hop le, vui long nhap lai" << endl;
-	} while (cot <= 0 || cot >= MAX_COT);
-
 	// Nhập ma trận
 	for (int i = 0; i < dong; i++)
 	{
@@ -189,7 +194,7 @@ int tinhTong(int a[MAX_DONG][MAX_COT], int dong, int cot)
 			tongGiaTri = tongGiaTri + a[i][j];
 
 	return tongGiaTri;
-}
+} // tinhTong()
 
 // 04. Hàm tìm giá trị nhỏ nhất
 void timGiaTriNhoNhat(int a[MAX_DONG][MAX_COT], int dong, int cot, int &viTriDong, int &viTriCot)

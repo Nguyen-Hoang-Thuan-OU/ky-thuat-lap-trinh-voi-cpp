@@ -1,5 +1,6 @@
 ﻿/*
 	Bài 08. Xây dựng các hàm:
+
 			- Khởi tạo ngẫu nhiên giá trị cho 1 mảng số nguyên
 			  gồm n hàng và n cột (ma trận vuông cấp n);
 

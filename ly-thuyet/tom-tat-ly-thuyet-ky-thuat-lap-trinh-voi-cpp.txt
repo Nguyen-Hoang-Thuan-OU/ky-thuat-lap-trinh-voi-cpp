@@ -1,6 +1,26 @@
 
 ==========================================================================================
 
+[ĐỆ QUY - RECURSION]
+
+Phương pháp gọi lại chính mình với quy mô nhỏ hơn.
+
+Giống như Búp bê Matryoska / Búp bê Nga / Búp bê babushka / Búp bê lồng nhau / Búp bê làm tổ / Búp bê xếp chồng / Búp bê trà Nga, khi con búp bê nhỏ nhất sẽ được chứa đựng trong lòng con búp bê lớn hơn nó một chút, đến lượt mình con búp bê lớn được chứa trong một con búp bê khác lớn hơn, và cứ thế cho đến con lớn nhất sẽ chứa tất cả những con búp bê còn lại trong bộ.
+
+* Đệ quy (recursion): phương pháp gọi lại chính mình với quy mô khác. Bảo làm một việc gì đó thì không chịu làm, mà lại đi làm một chuyện tương đương nhưng với quy mô nhỏ hơn.
+
+	Ví dụ:
+		5! = 1 * 2 * 3 * 4 * 5 = 120
+		5! = 5 * 4!
+		4! = 4 * 3!
+		3! = 3 * 2!
+		2! = 2 * 1!
+		1! = 1 -> Điểm dừng của đệ quy
+
+		n! = n * (n - 1)! -> Công thức lặp lại chính mình
+
+==========================================================================================
+
 ==========================================================================================
 
 --------------------------------------------------------------------------------

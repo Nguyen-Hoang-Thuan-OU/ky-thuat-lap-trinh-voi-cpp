@@ -15,7 +15,43 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BT01.cpp">
+    <ClCompile Include="BTH02-BT01-Tinh-De-Quy-Cac-Bieu-Thuc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT02-Tinh-Giai-Thua.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT03-Tinh-Gia-Tri-Fibonacci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT04-Tinh-Luy-Thua.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT05-Dem-Chu-So-Nguyen-Duong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT06-Tinh-So-Dao-Nguoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT07-Tinh-Tong-Chu-So-Chan-Va-Le.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT08-Chuyen-So-He-10-Sang-He-2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT09-Chuyen-So-He-2-Sang-He-10.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT10-Tim-Uoc-So-Chung-Lon-Nhat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT11-Tinh-Tong-Cac-Gia-Tri-Cua-Mang.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT12-Tim-Gia-Tri-Nho-Nhat-Trong-Mang.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BTH02-BT13-Tam-Giac-Pascal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

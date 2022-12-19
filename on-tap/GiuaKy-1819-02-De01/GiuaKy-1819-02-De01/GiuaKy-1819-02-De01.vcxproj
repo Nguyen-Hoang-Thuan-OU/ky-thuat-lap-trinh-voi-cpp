@@ -11,24 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BTH02-BT01-Tinh-De-Quy-Cac-Bieu-Thuc.cpp" />
-    <ClCompile Include="BTH02-BT02-Tinh-Giai-Thua.cpp" />
-    <ClCompile Include="BTH02-BT03-Tinh-Gia-Tri-Fibonacci.cpp" />
-    <ClCompile Include="BTH02-BT04-Tinh-Luy-Thua.cpp" />
-    <ClCompile Include="BTH02-BT05-Dem-Chu-So-Nguyen-Duong.cpp" />
-    <ClCompile Include="BTH02-BT06-Tinh-So-Dao-Nguoc.cpp" />
-    <ClCompile Include="BTH02-BT07-Tinh-Tong-Chu-So-Chan-Va-Le.cpp" />
-    <ClCompile Include="BTH02-BT08-Chuyen-So-He-10-Sang-He-2.cpp" />
-    <ClCompile Include="BTH02-BT09-Chuyen-So-He-2-Sang-He-10.cpp" />
-    <ClCompile Include="BTH02-BT10-Tim-Uoc-So-Chung-Lon-Nhat.cpp" />
-    <ClCompile Include="BTH02-BT11-Tinh-Tong-Cac-Gia-Tri-Cua-Mang.cpp" />
-    <ClCompile Include="BTH02-BT12-Tim-Gia-Tri-Nho-Nhat-Trong-Mang.cpp" />
-    <ClCompile Include="BTH02-BT13-Tam-Giac-Pascal.cpp" />
+    <ClCompile Include="Bai-04.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D10834F8-230F-48C3-99AD-BD6E65A19773}</ProjectGuid>
+    <ProjectGuid>{471661F9-34DE-4D22-B612-F1F131F16CC5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BTH02</RootNamespace>
+    <RootNamespace>GiuaKy181902De01</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

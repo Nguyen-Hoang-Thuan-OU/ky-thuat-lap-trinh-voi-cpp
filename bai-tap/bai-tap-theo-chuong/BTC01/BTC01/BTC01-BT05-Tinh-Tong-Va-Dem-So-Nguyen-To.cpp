@@ -17,38 +17,14 @@ void xuatMang(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
 int tinhTongCuaMang(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
 bool laSoNguyenTo(int soNguyen);
 int demSoLuongSoNguyenTo(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
+void intCacSoLuongSoNguyenTo(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
 
 int main()
 {
 	int a[SO_DONG_TOI_DA][SO_COT_TOI_DA];
 
 	int soDongThucTe, soCotThucTe;
-	
-	cout << "Nhap mang hai chieu\n" << endl;
-	nhapMang(a, soDongThucTe, soCotThucTe);
-	cout << endl;
-	
-	cout << "Mang hai chieu la:\n" << endl;
-	xuatMang(a, soDongThucTe, soCotThucTe);
-	cout << endl;
 
-	// Gọi hàm tính tổng và truyền tham số vào
-	cout << "Mang co tong cac phan tu la: "
-		<< tinhTongCuaMang(a, soDongThucTe, soCotThucTe);
-	cout << endl;
-
-	// Gọi hàm đếm số lượng số nguyên tố và tuyền tham số vào
-	cout << "Mang vua nhap co tong cong "
-		<< demSoLuongSoNguyenTo(a, soDongThucTe, soCotThucTe)
-		<< " so nguyen to\n";
-	cout << endl;
-
-	return 0;
-}
-
-// 01. Hàm nhập mảng
-void nhapMang(int a[][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe)
-{
 	// Kiểm soát giá trị khi người dùng nhập số dòng thực tế
 	do {
 		cout << "Nhap so dong can su dung (1..20): ";
@@ -77,6 +53,35 @@ void nhapMang(int a[][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe)
 		}
 	} while (soCotThucTe <= 0 || soCotThucTe > SO_COT_TOI_DA);
 	
+	cout << "Vui long nhap mang hai chieu\n" << endl;
+	nhapMang(a, soDongThucTe, soCotThucTe);
+	cout << endl;
+	
+	cout << "Mang hai chieu la:\n" << endl;
+	xuatMang(a, soDongThucTe, soCotThucTe);
+	cout << endl;
+
+	// Gọi hàm tính tổng và truyền tham số vào
+	cout << "Mang co tong cac phan tu la: "
+		<< tinhTongCuaMang(a, soDongThucTe, soCotThucTe);
+	cout << endl;
+
+	// Gọi hàm đếm số lượng số nguyên tố và tuyền tham số vào
+	cout << "Mang vua nhap co tong cong "
+		<< demSoLuongSoNguyenTo(a, soDongThucTe, soCotThucTe)
+		<< " so nguyen to\n";
+	cout << endl;
+	
+	cout << "Cac so nguyen to lan luot la: ";
+	intCacSoLuongSoNguyenTo(a, soDongThucTe, soCotThucTe);
+	cout << endl;
+
+	return 0;
+}
+
+// 01. Hàm nhập mảng
+void nhapMang(int a[][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe)
+{	
 	for (int i = 0; i < soDongThucTe; i++)
 	{
 		cout << "Nhap mot loat "
@@ -173,4 +178,13 @@ int demSoLuongSoNguyenTo(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThuc
 				tongSoLuongSoNguyenTo++;
 
 	return tongSoLuongSoNguyenTo;
+}
+
+// 06. Hàm in ra các số lượng số nguyên tố trong mảng
+void intCacSoLuongSoNguyenTo(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe)
+{
+	for (int i = 0; i < soDongThucTe; i++)
+		for (int j = 0; j < soCotThucTe; j++)
+			if (laSoNguyenTo(a[i][j]) == true)
+				cout << a[i][j] << "  ";
 }

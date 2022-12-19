@@ -10,6 +10,19 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BTH01-BT01-Nhap-Va-Xuat-Mang-Don-Gian.cpp" />
+    <ClCompile Include="BTH01-BT02-Nhap-Va-Xuat-Mang-Bang-Vong-Lap-While.cpp" />
+    <ClCompile Include="BTH01-BT03-Tinh-Tong--Tim-Va-Cho-Biet-Vi-Tri-Cua-GTLN--GTNN.cpp" />
+    <ClCompile Include="BTH01-BT04-Tinh-Tong-Hang--Cot-Va-Kiem-Tra-Ton-Tai.cpp" />
+    <ClCompile Include="BTH01-BT05-Tinh-Tong-Duong-Cheo-Chinh-Va-Phu.cpp" />
+    <ClCompile Include="BTH01-BT06-Tinh-Tong-Va-Tich-Hai-Ma-Tran.cpp" />
+    <ClCompile Include="BTH01-BT07-Tinh-TBC--Kiem-Tra-Ton-Tai--Hoan-Doi-Hai-Gia-Tri-Va-Tinh-Tich-Hang-Hoac-Cot.cpp" />
+    <ClCompile Include="BTH01-BT08-Khoi-Tao-Mang-Ngau-Nhien--Tinh-Tong-Va-Tich.cpp" />
+    <ClCompile Include="BTH01-BT09-Ma-Tran-Zigzag-Cot.cpp" />
+    <ClCompile Include="BTH01-BT10-Ma-Tran-Xoan-Oc.cpp" />
+    <ClCompile Include="BTH01-BT11-Dat-Ve-May-Bay.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{97344FC6-19FC-43AB-9545-2DF44D7274C0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

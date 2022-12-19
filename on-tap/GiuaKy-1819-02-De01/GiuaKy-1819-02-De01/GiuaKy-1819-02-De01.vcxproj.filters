@@ -15,22 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BTC01-BT01-Nhap--Xuat-Ma-Tran-Va-TInh-Tich-Dong.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BTC01-BT02-In-Ma-Tran-Tu-Trai-Sang-Phai.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BTC01-BT03-Nhap--Xuat-Ma-Tran-Bang-Vong-Lap-While.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BTC01-BT04-Kiem-Tra-Ton-Tai--So-Lan-Va-Vi-Tri-Xuat-Hien.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BTC01-BT05-Tinh-Tong-Va-Dem-So-Nguyen-To.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BTC01-BT06-Ma-Tran-Xoan-Oc.cpp">
+    <ClCompile Include="Bai-04.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

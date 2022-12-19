@@ -11,10 +11,10 @@ using namespace std;
 
 const int SO_DONG_TOI_DA = 10, SO_COT_TOI_DA = 5;
 
-void nhapMang(int a[][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe);
+void nhapMang(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
 void xuatMang(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
 void kiemTraGiaTriCoTrongMang(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe,
-								int &giaTriCanTim, int &viTriDong, int &viTriCot);
+								int giaTriCanTim, int &viTriDong, int &viTriCot);
 
 int main()
 {
@@ -25,26 +25,7 @@ int main()
 	int giaTriCanTim;
 
 	int viTriDong, viTriCot;
-
-	cout << "Nhap mang hai chieu\n" << endl;
-	nhapMang(a, soDongThucTe, soCotThucTe);
-	cout << endl;
-
-	cout << "Mang hai chieu la:\n" << endl;
-	xuatMang(a, soDongThucTe, soCotThucTe);
-	cout << endl;
 	
-	cout << "Tim mot gia tri xem co trong mang hay khong\n" << endl;
-	kiemTraGiaTriCoTrongMang(a, soDongThucTe, soCotThucTe,
-								giaTriCanTim, viTriDong, viTriCot);
-	cout << endl;
-
-	return 0;
-}
-
-// 01. Hàm nhập mảng
-void nhapMang(int a[][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe)
-{
 	// Kiểm soát giá trị khi người dùng nhập số dòng thực tế
 	do {
 		cout << "Nhap so dong can su dung (1..10): ";
@@ -72,7 +53,30 @@ void nhapMang(int a[][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe)
 			cout << endl;
 		}
 	} while (soCotThucTe <= 0 || soCotThucTe > SO_COT_TOI_DA);
+
+	cout << "Vui long nhap mang hai chieu\n" << endl;
+	nhapMang(a, soDongThucTe, soCotThucTe);
+	cout << endl;
+
+	cout << "Mang hai chieu la:\n" << endl;
+	xuatMang(a, soDongThucTe, soCotThucTe);
+	cout << endl;
 	
+	cout << "Tim mot gia tri xem co trong mang hay khong\n" << endl;
+	cout << "Vui long nhap gia tri can tim: ";
+	cin >> giaTriCanTim;
+	cout << endl;
+
+	kiemTraGiaTriCoTrongMang(a, soDongThucTe, soCotThucTe,
+								giaTriCanTim, viTriDong, viTriCot);
+	cout << endl;
+
+	return 0;
+}
+
+// 01. Hàm nhập mảng
+void nhapMang(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe)
+{	
 	for (int i = 0; i < soDongThucTe; i++)
 	{
 		cout << "Hay nhap cung luc " << soCotThucTe
@@ -99,13 +103,9 @@ void xuatMang(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe)
 //	   nếu có thì xuất hiện bao nhiêu lần
 //	   và vị trí đầu tiên xuất hiện là ở đâu?
 void kiemTraGiaTriCoTrongMang(int a[][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe,
-								int &giaTriCanTim, int &viTriDong, int &viTriCot)
+								int giaTriCanTim, int &viTriDong, int &viTriCot)
 {
 	int demSoLanXuatHien = 0;
-
-	cout << "Nhap gia tri can tim: ";
-	cin >> giaTriCanTim;
-	cout << endl;
 
 	for (int i = 0; i < soDongThucTe; i++)
 		for (int j = 0; j < soCotThucTe; j++)

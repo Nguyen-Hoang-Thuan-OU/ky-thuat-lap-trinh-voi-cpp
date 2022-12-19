@@ -15,32 +15,13 @@ using namespace std;
 
 const int CAP_CUA_MA_TRAN = 10;
 
-void nhapMaTran(int a[][CAP_CUA_MA_TRAN], int &soCapThucTeCuaMaTran);
+void nhapMaTran(int a[][CAP_CUA_MA_TRAN], int soCapThucTeCuaMaTran);
 void xuatMaTran(int a[][CAP_CUA_MA_TRAN], int soCapThucTeCuaMaTran);
 
 int main()
 {
 	int a[CAP_CUA_MA_TRAN][CAP_CUA_MA_TRAN];
 	int soCapThucTeCuaMaTran;
-	
-	cout << "Nhap ma tran hai chieu\n" << endl;
-	nhapMaTran(a, soCapThucTeCuaMaTran);
-	cout << endl;
-
-	cout << "Ma tran hai chieu la:\n" << endl;
-	xuatMaTran(a, soCapThucTeCuaMaTran);
-	cout << endl;
-
-	return 0;
-}
-
-// 01. Hàm nhập mảng
-void nhapMaTran(int a[][CAP_CUA_MA_TRAN], int &soCapThucTeCuaMaTran)
-{
-	int giaTri = 1;
-
-	int minDong, maxDong;
-	int minCot, maxCot;
 
 	// Kiểm soát giá trị khi người dùng nhập số cấp thực tế
 	do {
@@ -55,6 +36,25 @@ void nhapMaTran(int a[][CAP_CUA_MA_TRAN], int &soCapThucTeCuaMaTran)
 			cout << endl;
 		}
 	} while (soCapThucTeCuaMaTran <= 0 || soCapThucTeCuaMaTran > CAP_CUA_MA_TRAN);
+	
+	cout << "Nhap ma tran hai chieu\n" << endl;
+	nhapMaTran(a, soCapThucTeCuaMaTran);
+	cout << endl;
+
+	cout << "Ma tran hai chieu la:\n" << endl;
+	xuatMaTran(a, soCapThucTeCuaMaTran);
+	cout << endl;
+
+	return 0;
+}
+
+// 01. Hàm nhập mảng
+void nhapMaTran(int a[][CAP_CUA_MA_TRAN], int soCapThucTeCuaMaTran)
+{
+	int giaTri = 1;
+
+	int minDong, maxDong;
+	int minCot, maxCot;
 
 	minDong = minCot = 0;
 	maxDong = maxCot = soCapThucTeCuaMaTran - 1;

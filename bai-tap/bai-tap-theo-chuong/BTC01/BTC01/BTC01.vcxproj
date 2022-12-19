@@ -11,7 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BT06.cpp" />
+    <ClCompile Include="BTC01-BT01-Nhap--Xuat-Ma-Tran-Va-TInh-Tich-Dong.cpp" />
+    <ClCompile Include="BTC01-BT02-In-Ma-Tran-Tu-Trai-Sang-Phai.cpp" />
+    <ClCompile Include="BTC01-BT03-Nhap--Xuat-Ma-Tran-Bang-Vong-Lap-While.cpp" />
+    <ClCompile Include="BTC01-BT04-Kiem-Tra-Ton-Tai--So-Lan-Va-Vi-Tri-Xuat-Hien.cpp" />
+    <ClCompile Include="BTC01-BT05-Tinh-Tong-Va-Dem-So-Nguyen-To.cpp" />
+    <ClCompile Include="BTC01-BT06-Ma-Tran-Xoan-Oc.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{91339766-EB28-4873-822F-B5D153412A6F}</ProjectGuid>

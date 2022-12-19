@@ -3,7 +3,11 @@
 			Sau đó tính kết quả tổng và tích hai ma trận đó.
 */
 
+// Lỗi khi hai ma trận khác cấp
+// Cần xem lại hàm tính tổng và tích ma trận
+
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 const int MAX = 50;
@@ -18,6 +22,10 @@ void tinhTichMaTran(int maTranA[][MAX], int dongA, int cotA,
 
 int main()
 {
+	// Kết hợp với hàm tạo giá trị ngẫu nhiên rand()
+	// để giá trị của mảng khác nhau sau mỗi lần thực thi
+	srand(time(0));
+
 	int maTranA[MAX][MAX], maTranB[MAX][MAX], maTranKetQua[MAX][MAX];
 
 	int dongA, cotA, dongB, cotB;

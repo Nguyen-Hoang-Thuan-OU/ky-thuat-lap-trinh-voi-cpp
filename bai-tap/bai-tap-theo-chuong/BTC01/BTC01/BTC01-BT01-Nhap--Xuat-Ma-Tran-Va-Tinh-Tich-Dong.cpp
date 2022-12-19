@@ -24,10 +24,10 @@ const int SO_DONG_TOI_DA = 20, SO_COT_TOI_DA = 10;
 // thì nơi gọi hàm cũng sẽ bị ảnh hưởng theo)
 
 // Khai báo các nguyên mẫu hàm
-void nhapMang(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe);
+void nhapMang(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
 void xuatMang(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
-void tinhTichMotDongNaoDo(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA],
-							int soDongThucTe, int soCotThucTe, int &dongCanTinhTich);
+int tinhTichMotDongNaoDo(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA],
+							int soCotThucTe, int dongCanTinhTich);
 
 int main()
 {
@@ -45,8 +45,35 @@ int main()
 	// do người dùng yêu cầu.
 	int dongCanTinhTich;
 
+	// Kiểm soát giá trị khi người dùng nhập số dòng thực tế
+	do {
+		cout << "==================================================\n";
+		cout << "Nhap so dong can su dung (1..20): ";
+		cin >> soDongThucTe;
+		cout << endl;
+
+		if (soDongThucTe <= 0 || soDongThucTe > SO_DONG_TOI_DA)
+			cout << "Vui long nhap: 0 < So dong <= 20\n";
+	} while (soDongThucTe <= 0 || soDongThucTe > SO_DONG_TOI_DA);
+
+	cout << "Tong so dong dang su dung la: " << soDongThucTe << endl;
+	
+	// Kiểm soát giá trị khi người dùng nhập số cột thực tế
+	do {
+		cout << "==================================================\n";
+		cout << "Nhap so cot can su dung (1..10): ";
+		cin >> soCotThucTe;
+		cout << endl;
+
+		if (soCotThucTe <= 0 || soCotThucTe > SO_COT_TOI_DA)
+			cout << "Vui long nhap: 0 < So cot <= 10\n";
+	} while (soCotThucTe <= 0 || soCotThucTe > SO_COT_TOI_DA);
+
+	cout << "Tong so cot dang su dung la: " << soCotThucTe << endl;
+	cout << endl;
+
 	// Gọi hàm nhập mảng và tuyền tham số vào
-	cout << "Nhap mang hai chieu\n" << endl;
+	cout << "Vui long nhap mang hai chieu\n" << endl;
 	nhapMang(a, soDongThucTe, soCotThucTe);
 	cout << endl;
 
@@ -55,47 +82,34 @@ int main()
 	xuatMang(a, soDongThucTe, soCotThucTe);
 	cout << endl;
 
+	// Kiểm soát giá trị khi người dùng nhập số dòng cần tính tích
+	do {
+		cout << "Tong so dong dang su dung la: " << soDongThucTe << endl;
+		cout << "Tong so cot dang su dung la: " << soCotThucTe << endl;
+		cout << endl;
+
+		cout << "Nhap dong can tinh tich (1.." << soDongThucTe << "): ";
+		cin >> dongCanTinhTich;
+		cout << endl;
+
+		if (dongCanTinhTich < 1 || dongCanTinhTich > soDongThucTe)
+			cout << "Vui long nhap so dong (1.." << soDongThucTe << ")!\n";
+	} while (dongCanTinhTich < 1 || dongCanTinhTich > (soDongThucTe));
+
 	// Gọi hàm tính tích của một dòng nào đó
-	tinhTichMotDongNaoDo(a, soDongThucTe, soCotThucTe, dongCanTinhTich);
+	cout << "Tich cua dong " << dongCanTinhTich
+		<< " la: " << tinhTichMotDongNaoDo(a, soCotThucTe, dongCanTinhTich);
 	cout << endl;
 
 	return 0;
 }
 
 // a. Hàm nhập mảng
-void nhapMang(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe)
+void nhapMang(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe)
 {
 	// Để gọi được hàm này,
 	// nơi gọi đã phải có những giá trị tương ứng
 	// như những gì mà tham số yêu cầu
-
-	// Kiểm soát giá trị khi người dùng nhập số dòng thực tế
-	do {
-		cout << "Nhap so dong can su dung (1..20): ";
-		cin >> soDongThucTe;
-		cout << endl;
-
-		if (soDongThucTe <= 0 || soDongThucTe > SO_DONG_TOI_DA)
-		{
-			cout << "Gia tri nhap khong hop le!\n";
-			cout << "Vui long nhap: 0 < So dong <= 20\n";
-			cout << endl;
-		}
-	} while (soDongThucTe <= 0 || soDongThucTe > SO_DONG_TOI_DA);
-	
-	// Kiểm soát giá trị khi người dùng nhập số cột thực tế
-	do {
-		cout << "Nhap so cot can su dung (1..10): ";
-		cin >> soCotThucTe;
-		cout << endl;
-
-		if (soCotThucTe <= 0 || soCotThucTe > SO_COT_TOI_DA)
-		{
-			cout << "Gia tri nhap khong hop le!\n";
-			cout << "Vui long nhap: 0 < So cot <= 10\n";
-			cout << endl;
-		}
-	} while (soCotThucTe <= 0 || soCotThucTe > SO_COT_TOI_DA);
 	
 	// Nhập từng giá trị cho mảng hai chiều,
 	// cần phải biết giá trị đó nằm ở dòng và cột nào
@@ -133,31 +147,19 @@ void xuatMang(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int soDongThucTe, int soCotT
 } // xuatMang()
 
 // c. hàm tính tích các phần tử tại 1 dòng nào đó
-void tinhTichMotDongNaoDo(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA],
-							int soDongThucTe, int soCotThucTe, int &dongCanTinhTich)
+int tinhTichMotDongNaoDo(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA],
+							int soCotThucTe, int dongCanTinhTich)
 {
 	// Tính tích các phần tử tại 1 dòng nào đó
 	// do người dùng yêu cầu.
-	int ketQua = 1;
-
-	// Nhập dòng cần tính tích
-	do {
-		cout << "Nhap dong can tinh tich (1.." << soDongThucTe << "): ";
-		cin >> dongCanTinhTich;
-		cout << endl;
-
-		if (dongCanTinhTich < 1 || dongCanTinhTich > soDongThucTe)
-			cout << "Nhap sai, vui long nhap lai (1.." << soDongThucTe << ")!\n" << endl;
-	} while (dongCanTinhTich < 1 || dongCanTinhTich > (soDongThucTe));
+	int ketQuaTinhTichDong = 1;
 
 	// Sau khi đã chọn được dòng cần tính tích,
 	// cố định dòng đó lại
 	// và duyệt toàn bộ phần tử theo cột (từ trái sang phải)
 	// để tính tích
 	for (int j = 0; j < soCotThucTe; j++)
-			ketQua = ketQua * a[dongCanTinhTich - 1][j];
+			ketQuaTinhTichDong = ketQuaTinhTichDong * a[dongCanTinhTich - 1][j];
 
-	// In ra kết quả tính tích của dòng đã chọn
-	cout << "Tich cua dong " << dongCanTinhTich
-		<< " la: " << ketQua << endl;
+	return ketQuaTinhTichDong;
 } // tinhTichMotDongNaoNo()

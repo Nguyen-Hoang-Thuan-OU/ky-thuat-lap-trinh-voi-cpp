@@ -13,7 +13,7 @@ using namespace std;
 
 const int SO_DONG_TOI_DA = 20, SO_COT_TOI_DA = 10;
 
-void nhapMaTran(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe);
+void nhapMaTran(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
 void xuatMaTran(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe);
 
 int main()
@@ -21,20 +21,6 @@ int main()
 	int a[SO_DONG_TOI_DA][SO_COT_TOI_DA];
 	int soDongThucTe, soCotThucTe;
 
-	cout << "Nhap ma tran hai chieu\n" << endl;
-	nhapMaTran(a, soDongThucTe, soCotThucTe);
-	cout << endl;
-
-	cout << "Ma tran hai chieu la:\n" << endl;
-	xuatMaTran(a, soDongThucTe, soCotThucTe);
-	cout << endl;
-
-	return 0;
-}
-
-// 01. Hàm nhập vào ma trận hai chiều
-void nhapMaTran(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int &soDongThucTe, int &soCotThucTe)
-{
 	// Kiểm soát giá trị khi người dùng nhập số dòng thực tế
 	do {
 		cout << "Nhap so dong can su dung (1..20): ";
@@ -63,6 +49,20 @@ void nhapMaTran(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int &soDongThucTe, int &so
 		}
 	} while (soCotThucTe <= 0 || soCotThucTe > SO_COT_TOI_DA);
 
+	cout << "Vui long nhap ma tran hai chieu\n" << endl;
+	nhapMaTran(a, soDongThucTe, soCotThucTe);
+	cout << endl;
+
+	cout << "Ma tran hai chieu la:\n" << endl;
+	xuatMaTran(a, soDongThucTe, soCotThucTe);
+	cout << endl;
+
+	return 0;
+}
+
+// 01. Hàm nhập vào ma trận hai chiều
+void nhapMaTran(int a[SO_DONG_TOI_DA][SO_COT_TOI_DA], int soDongThucTe, int soCotThucTe)
+{
 	int giaTri = 1;
 
 	for (int i = 0; i < soDongThucTe; i++)
