@@ -1,0 +1,28 @@
+﻿v | Tạo ra 1 giá trị nguyên ngẫu nhiên bằng hàm rand() - https://www.youtube.com/watch?v=pFflwrhosaE
+
+v | Mảng chuỗi(Phần 1) - https://youtu.be/udZJQnU11Wo
+v | Mảng Chuỗi(Phần 2) - https://www.youtube.com/watch?v=QP7eFQBJJDA
+v | Mảng chuỗi(Phần 3) - https://www.youtube.com/watch?v=JdfUF0vKleg
+v | Chuỗi kí tự - Các hàm thường dùng trong thao tác chuỗi - https://www.youtube.com/watch?v=vsLJyHMGTQY
+v | Khai báo - Nhập và xuất chuỗi từ bàn phím - https://www.youtube.com/watch?v=GqHTsEzs3CE
+v | Chuỗi - Mảng 1 chiều các kí tự - https://www.youtube.com/watch?v=jsoyBh-kcrY
+v | Xây dựng hàm tính độ dài chuỗi strlen - https://www.youtube.com/watch?v=f_aftf7-DAY
+v | Xây dựng hàm strcpy - Sao chép chuỗi - https://www.youtube.com/watch?v=I4rhAbnd0Bs
+Chuẩn hóa chuỗi string trong C++ - https://www.youtube.com/watch?v=hJEl003c3us
+
+v | Bắt từng kí tự để xử lí bằng hàm getch() - https://www.youtube.com/watch?v=Y332eIhDEZQ
+
+
+
+Tập tin - Ghi file - https://www.youtube.com/watch?v=eG5yVKvlOUU
+Tập tin - Đọc file - https://www.youtube.com/watch?v=0Tj0Seckt84
+Tập tin - Đọc 2 số nguyên - https://www.youtube.com/watch?v=vXH8ewh1oW0
+
+Đọc ghi file - struct - https://www.youtube.com/watch?v=PQP3jWA35NE
+Cú pháp khai báo struct - https://www.youtube.com/watch?v=xNTAQPasbNo
+Struct - Thông tin sinh viên - https://www.youtube.com/watch?v=W6wYlBUS0SY
+Nạp chồng toán tử - Operator Overloading - https://youtu.be/IX7HBD8TKlk
+Nạp chồng toán tử - Operator Overloading - Struct Phân Số - https://www.youtube.com/watch?v=YXM_kDOuIBs
+
+Đọc - Ghi file thông tin sinh viên(Phần 1) - https://www.youtube.com/watch?v=x-uR5GFmUU0
+Đọc - Ghi file thông tin sinh viên(Phần 2) - https://www.youtube.com/watch?v=Vzc4o_EU8RE
