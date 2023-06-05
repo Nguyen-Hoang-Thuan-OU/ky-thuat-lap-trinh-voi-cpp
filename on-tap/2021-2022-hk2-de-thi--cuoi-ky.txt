@@ -1,0 +1,5 @@
+﻿Câu 1: Xuất ma trận xoắn ốc từ trong ra ngoài bằng cấp phát động.
+
+Câu 2: Tạo class điểm. Nhập vào 2 điểm AB tính khoảng cách AB. Tính diện tích đường tròn đường kính AB.
+
+Câu 3: Tạo struct sinh viên và ghi vào file thông tin sinh viên, tính điểm quá trình và điểm cuối kỳ.
