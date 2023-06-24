@@ -5,11 +5,14 @@
 
 [ĐỆ QUY - RECURSION]
 
-Phương pháp gọi lại chính mình với quy mô nhỏ hơn.
+Phương pháp gọi lại chính mình với một quy mô khác (nhỏ hơn), đến một lúc nào đó thì sẽ dừng và bắt đầu hồi / dội ngược trở lại.
 
-Giống như Búp bê Matryoska / Búp bê Nga / Búp bê babushka / Búp bê lồng nhau / Búp bê làm tổ / Búp bê xếp chồng / Búp bê trà Nga, khi con búp bê nhỏ nhất sẽ được chứa đựng trong lòng con búp bê lớn hơn nó một chút, đến lượt mình con búp bê lớn được chứa trong một con búp bê khác lớn hơn, và cứ thế cho đến con lớn nhất sẽ chứa tất cả những con búp bê còn lại trong bộ.
+Giống như Búp bê Matryoska / Búp bê Nga / Búp bê babushka / Búp bê lồng nhau / Búp bê làm tổ / Búp bê xếp chồng / Búp bê trà Nga, khi con búp bê nhỏ nhất sẽ được chứa đựng trong lòng con búp bê lớn hơn nó một chút, đến lượt con búp bê lớn lại được chứa trong một con búp bê khác lớn hơn, cứ thế lặp và con lớn nhất sẽ chứa tất cả những con búp bê còn lại trong bộ.
 
-* Đệ quy (recursion): phương pháp gọi lại chính mình với quy mô khác. Bảo làm một việc gì đó thì không chịu làm, mà lại đi làm một chuyện tương đương nhưng với quy mô nhỏ hơn.
+* Đệ quy (Recursion): phương pháp gọi lại chính mình với quy mô khác.
+	- Bảo làm một việc gì đó thì không chịu làm, mà lại đi làm một chuyện tương đương nhưng với quy mô khác (nhỏ hơn).
+	- Gọi lại chính mình với một giá trị đầu vào khác biệt sau mỗi lần, liên tục như thế cho đến khi thoả mãn điều kiện dừng.
+	- Bắt buộc phải có điều kiện dừng, nếu không sẽ vĩnh viễn không thể thoát ra được.
 
 	Ví dụ:
 		5! = 1 * 2 * 3 * 4 * 5 = 120
