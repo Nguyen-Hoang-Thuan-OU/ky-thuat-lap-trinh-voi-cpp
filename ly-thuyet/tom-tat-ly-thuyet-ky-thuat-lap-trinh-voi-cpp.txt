@@ -13,21 +13,32 @@ Giống như Búp bê Matryoska / Búp bê Nga / Búp bê babushka / Búp bê l�
 	- Bảo làm một việc gì đó thì không chịu làm, mà lại đi làm một chuyện tương đương nhưng với quy mô khác (nhỏ hơn).
 	- Gọi lại chính mình với một giá trị đầu vào khác biệt sau mỗi lần, liên tục như thế cho đến khi thoả mãn điều kiện dừng.
 	- Bắt buộc phải có điều kiện dừng, nếu không sẽ vĩnh viễn không thể thoát ra được.
+	- Tuy có cách viết code siêu ngắn gọn, nhưng sẽ liên tục bỏ lửng câu lệnh và khiến RAM bị hao.
 
-	Ví dụ:
+	Ví dụ: Cách tính giai thừa.
+
 		5! = 1 * 2 * 3 * 4 * 5 = 120
 		5! = 5 * 4!
 		4! = 4 * 3!
 		3! = 3 * 2!
 		2! = 2 * 1!
-		1! = 1 -> Điểm dừng của đệ quy
+		1! = 1 * 0!
+		0! = 1 -> Điểm dừng của đệ quy
+
+		// Công thức 5! vào trước và 0! vào sau,
+		// nhưng 0! lại được tính toán trước
+		//	-> Last In, First Out (LIFO)
 
 		n! = n * (n - 1)! -> Công thức lặp lại chính mình
+
+	- Khi viết những chương trình, nếu không khéo sẽ có thể bị tràn bộ nhớ (Stack overflow).
+		+ Nguyên nhân là thiếu mất điều kiện dừng, khiến cho công thức tính toán liên tục bị tạm hoãn và liên tục lặp lại với một quy mô khác.
+		+ Vì vùng nhớ này có giới hạn, khiến việc lặp lại nếu đến một mức độ nào đó (tuỳ theo sức chứa của kiểu dữ liệu) sẽ bị tràn bộ nhớ.
 
 --------------------------------------------------------------------------------
 
 Cần xác định được:
-	1. Trường hợp cơ sở / cơ bản (Basic Case): có thể trả về kết quả trực tiếp.
+	1. Trường hợp cơ sở / cơ bản (Basic Case): có thể trả về kết quả trực tiếp, đồng thời cũng là điều kiện dừng.
 	2. Trường hợp tổng quát (General Case): chứa câu lệnh để tự gọi lại hàm đệ quy.
 	-> Gọi lại chính mình để làm đơn giản hoá / tinh giản độ phức tạp.
 		(Bắt đầu từ tổng quát, sau đó quy về cơ bản.)
